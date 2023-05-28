@@ -1,11 +1,12 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+
 import { Product } from '../product';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ProductServiceService {
+export class ProductService {
   baseUrl: string;
   headers: HttpHeaders;
 

@@ -1,0 +1,10 @@
+<form active="">
+  <input type="string" name="id" id="id" placeholder="ID" [(ngModel)]="item.id">
+  <input type="text" name="name" id="name" placeholder="Nome" [(ngModel)]="item.name">
+
+  <input type="string" name="unit" id="unit" placeholder="Unidade" [(ngModel)]="item.unit">
+  <input type="number" name="price" id="price" placeholder="Preço" [(ngModel)]="item.price">
+  <input type="checkbox" name="active" id="active" [(ngModel)]="item.active">
+  <label for="active">Ativo</label>
+  <button type="submit">Salvar</button>
+</form>
