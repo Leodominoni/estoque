@@ -9,13 +9,16 @@ export class ProductServiceService {
   baseUrl: string;
   headers: HttpHeaders;
 
+  private token = 'aL!HZN7Vd4xKHMxEODdf4ZkXvdKf5vDy8VjJPDl-jv244qn17NP=fXV-j=q6BMVV'
+
   constructor(private http: HttpClient) {
     this.baseUrl = "https://hmax-api-wzmzeliz4a-rj.a.run.app/api/dev-challange/products";
     this.headers = new HttpHeaders().set('Content-Type', 'application/json', )
                                     .set('Accept', 'application/json')
                                     .set('Access-Control-Allow-Origin', "")
                                     .set('Access-Control-Allow-Headers', "")
-                                    .set('Access-Control-Allow-Methods', 'GET, POST, PATCH, DELETE');
+                                    .set('Access-Control-Allow-Methods', 'GET, POST, PATCH, DELETE')
+                                    .set('token', this.token)
   }
 
   getAll(){
