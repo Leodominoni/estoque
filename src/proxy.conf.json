@@ -1,0 +1,11 @@
+{
+    "/api" : {
+        "target": "https://hmax-api-wzmzeliz4a-rj.a.run.app/api/dev-challange/products",
+        "secure": false,
+        "pathRewrite": {
+            "^/api": ""
+        },
+        "changerOrigin": true,
+        "logLevel": "debug"
+    }
+}

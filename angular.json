@@ -68,7 +68,8 @@
               "browserTarget": "estoque:build:production"
             },
             "development": {
-              "browserTarget": "estoque:build:development"
+              "browserTarget": "estoque:build:development",
+              "proxyConfig": "proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
@@ -100,5 +101,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "dbf7e38f-8afa-4361-8d12-172894dc1580"
   }
 }
