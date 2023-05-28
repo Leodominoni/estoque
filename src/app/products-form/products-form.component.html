@@ -1,10 +1,36 @@
-<form active="">
-  <input type="string" name="id" id="id" placeholder="ID" [(ngModel)]="item.id">
-  <input type="text" name="name" id="name" placeholder="Nome" [(ngModel)]="item.name">
-
-  <input type="string" name="unit" id="unit" placeholder="Unidade" [(ngModel)]="item.unit">
-  <input type="number" name="price" id="price" placeholder="Preço" [(ngModel)]="item.price">
-  <input type="checkbox" name="active" id="active" [(ngModel)]="item.active">
-  <label for="active">Ativo</label>
-  <button type="submit">Salvar</button>
-</form>
+<div class="row mt-5">
+  <div class="col-12">
+    <form>
+      <div class="form-row">
+        <div class="form-group col-6">
+          <label for="id">ID: </label>
+          <input type="text" name="id" id="id" class="form-control" [(ngModel)]="item.id">
+        </div>
+        <div class="form-group col-6">
+          <label for="name">Nome: </label>
+          <input type="text" name="name" class="form-control" id="name"  [(ngModel)]="item.name">
+        </div>
+        <div class="form-group col-6">
+          <label for="unit">Unidade: </label>
+          <input type="string" name="unit" id="unit" class="form-control" [(ngModel)]="item.unit">
+        </div>
+        <div class="form-group col-6">
+          <label for="price">Preço: </label>
+          <input type="number" name="price" id="price" class="form-control" [(ngModel)]="item.price">
+        </div>
+      </div>
+      <div class="custom-control custom-switch">
+        <input type="checkbox" name="active" id="active" class="custom-control-checkbox" [(ngModel)]="item.active">
+        <label for="active" class="custom-control-label">Ativo</label>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="row mt-3">
+  <div class="col-12">
+  <div class="float-right">
+      <a routerLink="/produtos" class="btn btn-danger me-md-1">Voltar</a>
+      <button type="button"(click)="save()" class="btn btn-success">Salvar</button>
+    </div>
+  </div>
+</div>

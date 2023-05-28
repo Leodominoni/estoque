@@ -1,19 +1,31 @@
-<a routerLink="/produtos/novo">Inserir novo</a>
-<table>
-  <tr>
-    <td>ID</td>
-    <td>Nome</td>
-    <td>Unidade</td>
-    <td>Preço</td>
-    <td>Ações</td>
-  </tr>
-  <tr *ngFor="let item of items">
-    <td>{{ item.id }}</td>
-    <td>{{ item.name }}</td>
-    <td>{{ item.unit }}</td>
-    <td>{{ item.price }}</td>
-    <td>
-      <a [routerLink]="'/produtos/' + item.id ">Editar</a>
-    </td>
-  </tr>
-</table>
+<a routerLink="/produtos/novo" class="btn btn-primary mt-2">Inserir novo</a>
+<div class="row mt-5">
+  <div class="col-12">
+    <table class="table table-bordered">
+      <tr>
+        <td>ID</td>
+        <td>Nome</td>
+        <td>Unidade</td>
+        <td>Preço</td>
+        <td>Ações</td>
+      </tr>
+      <tr *ngFor="let item of items">
+        <td>{{ item.id }}</td>
+        <td>{{ item.name }}
+          <span *ngIf="!item.active" class="badge badge-secondary">Inativo</span>
+        </td>
+        <td>{{ item.unit }}</td>
+        <td>{{ item.price }}</td>
+        <td>
+          <div class="d-grid gap-2 d-md-block justify-content-md-end">
+            <a [routerLink]="'/produtos/' + item.id" class="btn btn-success me-md-1">Editar</a>
+            <button type="button"(click)="delete(item.id)" class="btn btn-danger">Deletar</button>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+
+

@@ -16,8 +16,28 @@ export class ProductsListComponent implements OnInit {
   constructor(private service: ProductService){}
 
   ngOnInit(): void {
-    this.service.getAll().subscribe((data: any) => {
-      this.items = data;
-    });
+    this.gelAll()
+
+  }
+
+  gelAll(){
+    this.service.getAll().subscribe((data: any) => this.items = data);
+  }
+
+  delete(id: string) {
+    this.service.delete(id).subscribe(
+      (data: any) => this.callbackSucess(),
+      (error: any) => this.callbackError(error)
+    );
+  }
+
+  private callbackSucess(){
+    alert('Registro registrado com sucesso')
+    this.gelAll()
+  }
+
+  private callbackError(error:any){
+    alert('Registro registrado com sucesso')
+    console.log(error)
   }
 }

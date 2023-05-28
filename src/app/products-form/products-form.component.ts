@@ -27,5 +27,28 @@ export class ProductsFormComponent implements OnInit{
       this.service.getOne(id).subscribe((data:any) => this.item = data);
     }
   }
+  
+  save(){
+    if(this.item.id){
+      this.service.update(this.item).subscribe(
+        (data: any) => this.callbackSucess(),
+        (error: any) => this.callbackError(error)
+      );
+    } else{
+        this.service.insert(this.item).subscribe(
+        (data: any) => this.callbackSucess(),
+        (error: any) => this.callbackError(error)
+      );
+    }
+   }
+  private callbackSucess(){
+    this.router.navigate(['/produtos']);
+  }
 
+  private callbackError(error: any){
+    alert('Ocorreu um erro');
+    console.log(error);
+  }
 }
+
+
