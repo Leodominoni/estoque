@@ -1,27 +1,48 @@
 # Estoque
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.3.
+Este é o arquivo README para o projeto Estoque desenvolvido em Angular. Aqui você encontrará as informações necessárias para executar e configurar o projeto em seu ambiente local.
 
-## Development server
+# Descrição do Projeto
+O projeto Estoque (Angular) é um sistema de gerenciamento de estoque desenvolvido com o framework Angular. 
+Ele permite controlar as entradas e saídas de produtos em um estoque, bem como consultar as quantidades disponíveis e realizar atualizações.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+# Pré-requisitos
+Antes de executar o projeto, certifique-se de ter as seguintes dependências instaladas em seu ambiente:
 
-## Code scaffolding
+Node.js: https://nodejs.org (versão recomendada: LTS)
+Angular CLI: Execute o seguinte comando para instalar o Angular CLI globalmente:
+``
+npm install -g @angular/cli
+``
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Instalação
+Siga os passos abaixo para configurar o ambiente de desenvolvimento:
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Clone o repositório para o seu computador:
 
-## Running unit tests
+``
+git clone https://github.com/Leodominoni/estoque.git
+``
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Navegue até o diretório do projeto Angular:
 
-## Running end-to-end tests
+``
+cd estoque/angular-app
+``
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Instale as dependências do projeto:
 
-## Further help
+``
+npm install
+``
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+Executando o Projeto
+Após a conclusão da instalação, execute o projeto com o seguinte comando:
+
+``
+ng serve
+``
+
+Isso iniciará o servidor de desenvolvimento do Angular. Acesse a aplicação em seu navegador através do endereço http://localhost:4200/.
